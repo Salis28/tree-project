@@ -8,14 +8,35 @@
 </head>
 <body>
   <nav>
-    <a href="index.html">留言</a>
-    <a href="reply.html">查看留言</a>
-    <a href="profile.html">我的</a>
+    留言
+    查看留言
+    我的
   </nav>
+
   <main>
     <h1>留言列表</h1>
     <div id="messages"></div>
   </main>
-  <script src="replies.js"></script>
+
+  <script>
+    // 模拟留言数据（之后你可以从 GitHub JSON 加载）
+    const messages = [
+      { id: 1, content: "今天心情有点复杂，但还挺感谢这个树洞。", time: "2025-05-27 13:50" },
+      { id: 2, content: "Salis 是个小狗", time: "2025-05-27 14:00" },
+      { id: 3, content: "有时候真的不知道该跟谁说话，就来这儿写两句。", time: "2025-05-27 14:10" }
+    ];
+
+    const container = document.getElementById("messages");
+
+    messages.forEach(msg => {
+      const msgDiv = document.createElement("div");
+      msgDiv.className = "message";
+      msgDiv.innerHTML = `
+        <p>${msg.content}</p >
+        <small>${msg.time}</small>
+      `;
+      container.appendChild(msgDiv);
+    });
+  </script>
 </body>
 </html>
