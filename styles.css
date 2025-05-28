@@ -31,13 +31,12 @@ button {
   display: none;
 }
 .message {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 3px solid #999;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 12px;
-  margin: 10px 0;
-  background-color: #f9f9f9;
 }
-
 .message p {
   margin: 0;
 }
